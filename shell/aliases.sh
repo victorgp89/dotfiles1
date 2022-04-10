@@ -3,8 +3,8 @@ alias sudo='sudo '
 
 alias ..="cd .."
 alias ...="cd ../.."
-alias ll="ls -l"
-alias la="ls -la"
+alias ll="ls -l --color=auto"
+alias la="ls -la --color=auto"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
 
@@ -28,3 +28,6 @@ alias i.='(idea $PWD &>/dev/null &)'
 alias c.='(code $PWD &>/dev/null &)'
 alias o.='open .'
 alias up='dot package update_all'
+
+alias gtp='cd /home/overwolf/Projects'
+alias dcon="docker_connect"

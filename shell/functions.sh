@@ -17,3 +17,8 @@ function recent_dirs() {
 
   cd "$(echo "$selected" | sed "s/\~/$escaped_home/")" || echo "Invalid directory"
 }
+
+function docker_connect() {
+  containerid=$(docker ps | tail -n +2 | fzf | awk '{print $1}')
+  docker exec -it $containerid bash
+}
