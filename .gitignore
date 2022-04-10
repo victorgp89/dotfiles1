@@ -1,1 +1,2 @@
-!.editors/vim/plugged
+editors/vim/plugged
+shell/zsh/.zim/modules/* 

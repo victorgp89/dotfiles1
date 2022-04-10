@@ -1,53 +1,32 @@
-call plug#begin('~/.vim/autoload')
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-call plug#end()
-
-let g:airline_theme='gruvbox'
-let g:airline_powerline_fonts = 1
-
-let mapleader = " "
-
-" Basic
+set number
+set mouse=a
+set numberwidth=1
+set clipboard=unnamed
 syntax on
-colorscheme gruvbox
-set background=dark
+set showcmd
+set ruler
+set cursorline
 set encoding=utf-8
-set number relativenumber
+set showmatch
+set termguicolors
+set sw=2
+set relativenumber
+so ~/.vim/plugins.vim
+so ~/.vim/plugin-config.vim
+so ~/.vim/maps.vim
 
-" Indentation
-filetype plugin indent on
-set autoindent
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set bg=dark
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
+highlight Normal ctermbg=NONE
+set laststatus=2
+set noshowmode
 
-" Search
-set hlsearch
-set ignorecase
-set incsearch
-set smartcase
+au BufNewFile,BufRead *.html set filetype=htmldjango
 
-" Autocompletion
-set wildmode=longest,list,full
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
 
-" Tree view
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 20
-
-
-" Key maps
-nmap <leader><C-f> :Files .<CR>
-nmap <leader><C-e> :Buffers<CR>
-nmap <leader><C-g> :GFiles?<CR>
-nmap <leader><C-r> :! 
-nmap <leader>1 :Vexplore<CR>
