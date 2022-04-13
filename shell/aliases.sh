@@ -7,6 +7,7 @@ alias ll="ls -l --color=auto"
 alias la="ls -la --color=auto"
 alias ~="cd ~"
 alias dotfiles='cd $DOTFILES_PATH'
+alias nnn="nnn -a"
 
 # Git
 alias gaa="git add -A"
@@ -29,5 +30,5 @@ alias c.='(code $PWD &>/dev/null &)'
 alias o.='open .'
 alias up='dot package update_all'
 
-alias gtp='cd /home/overwolf/Projects'
+alias gtp='cd $PROJECTS_HOME'
 alias dcon="docker_connect"
